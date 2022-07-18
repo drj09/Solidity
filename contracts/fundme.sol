@@ -10,6 +10,7 @@ contract FundMe{
 
     function fund() public payable{
 
+        //after getting library we can use this fucntion directly
         msg.value.getConversionRate();
         // require((msg.value) >= minimumUsd,"Didn't send enough !"); 
 
