@@ -1,0 +1,82 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumUsd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/fundme.sol": "FundMe"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xf2b6c9adb3552254df1445b73563cf014434ff5e78663e9b961b6c059506ceb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c1f59e0c7334c22fb54288728fc32546bdc9c8133d6db0d60223e3c28f52120",
+				"dweb:/ipfs/QmeuxawUVBhMWQJXaEhhnubCTc4Jwn5wYK8gbhq6NjrpfG"
+			]
+		},
+		"contracts/PriceConverter.sol": {
+			"keccak256": "0xefee4216c242e2db40faf7afba82007a35561a2849dafdec8d3ac25c8e32f521",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://34e2ae714b046617da450820251e1831d853698a007314df2461579860b1fad5",
+				"dweb:/ipfs/QmQZNknuzcbAmuxh3abQQhVpyWYUn7RAZEj8KkZAU5aoda"
+			]
+		},
+		"contracts/fundme.sol": {
+			"keccak256": "0xf6080c1cce0449ba46fbfd3dd08638d075c1fcbb61ef3a79185ab319e652dcc6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9729bbd37ccddcdf7c7c89c1a9378fc54af1a23c18745111d1055936b7f31915",
+				"dweb:/ipfs/Qmd7FK74zy9LtbpExfyyUUoKVBK5HeeoYtqgE1Ce9ubAMt"
+			]
+		}
+	},
+	"version": 1
+}
