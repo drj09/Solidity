@@ -3,6 +3,8 @@ pragma solidity ^0.8.8;
 
 import "./PriceConverter.sol";
 
+
+error NotOwner();
 contract FundMe{
 
     using PriceConverter for uint256;
@@ -53,8 +55,15 @@ contract FundMe{
     //modifier : Function Modifiers are used to modify the behaviour of a function.
     modifier onlyOwner {
         //_;   // if you want to run function then modifier.
-        require(msg.sender == owner,"Only owner can withdraw");
+        
+        /*normal error sending
+            require(msg.sender == owner,"Only owner can withdraw");
+        */
+        // this is custom error and cost efficient 
+        if(msg.sender != owner) {revert NotOwner();}
+        
+        
         _;  //do rest of the code  first the modifier will be called then the other function will be invoked.
     }
 
-}
+} 
