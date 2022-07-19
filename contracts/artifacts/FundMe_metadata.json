@@ -138,11 +138,11 @@
 			]
 		},
 		"contracts/fundme.sol": {
-			"keccak256": "0x1f720d20bdd9071482457624562068b92ab6695d6b1cf9123fad1d25c17cb13f",
+			"keccak256": "0x2984a39c572054484e468df7d6d1ba11e13f3f8688a7cf7678d541a32447bfa7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://22e239668369b9766a352fa50367a9c40719ad7d886f70ae51179ee1e7257600",
-				"dweb:/ipfs/QmRmuNEsauWDFxaBRquXgWzSjh7NVWUzoNMY31uCZ2V6jZ"
+				"bzz-raw://d965229c9e89ff1d94d90c62b2802b957bbb4e1c399b90984b2e8c2cda6b1f0b",
+				"dweb:/ipfs/QmNQbkF8iVxEFZKUUuYrZMmNYRD1XpRSEW9dh5v6rrHgYd"
 			]
 		}
 	},
