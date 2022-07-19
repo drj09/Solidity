@@ -31,27 +31,33 @@ contract FundMe{
         owner = msg.sender;
     }
     
-    
-    
-    
-    function withdraw() public onlyOwner{
-
-        for(uint256 funderIndex = 0;funderIndex < funders.length; funderIndex = funderIndex++){
-            //code
+    function withdraw() payable onlyOwner public {
+        for (uint256 funderIndex=0; funderIndex < funders.length; funderIndex++){
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
         }
+
         //reset the array
         funders = new address[](0);
+
         //actually withdraw funds
         /*there are 3 ways to send Ether:
             1. transfer  :  throw error   and gas fees is 2300
             2. send      :  give boolean if transfer was successful   and gas fees is 2300 
             3. call      :  can Modifiy gas fees here
         */ 
-        payable(msg.sender).transfer(address(this).balance);
+
+        // // transfer
+        // payable(msg.sender).transfer(address(this).balance);
+        // // send
+        // bool sendSuccess = payable(msg.sender).send(address(this).balance);
+        // require(sendSuccess, "Send failed");
+        // call
+        (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
+        require(callSuccess, "Call failed");
     }
- 
+    
+
     //modifier : Function Modifiers are used to modify the behaviour of a function.
     modifier onlyOwner {
         //_;   // if you want to run function then modifier.
@@ -66,6 +72,13 @@ contract FundMe{
         _;  //do rest of the code  first the modifier will be called then the other function will be invoked.
     }
 
+    fallback() external payable {
+        fund();
+    }
+
+    receive() external payable {
+        fund();
+    }
 
 
 

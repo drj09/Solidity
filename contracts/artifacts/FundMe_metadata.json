@@ -16,6 +16,10 @@
 				"type": "error"
 			},
 			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -90,8 +94,12 @@
 				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -138,11 +146,11 @@
 			]
 		},
 		"contracts/fundme.sol": {
-			"keccak256": "0x2984a39c572054484e468df7d6d1ba11e13f3f8688a7cf7678d541a32447bfa7",
+			"keccak256": "0x23e25f3f85ea5b2c781cc2bd0fa8afea9ccc4163e9ce9f9714d6dc822a430077",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d965229c9e89ff1d94d90c62b2802b957bbb4e1c399b90984b2e8c2cda6b1f0b",
-				"dweb:/ipfs/QmNQbkF8iVxEFZKUUuYrZMmNYRD1XpRSEW9dh5v6rrHgYd"
+				"bzz-raw://7c88fbd61963ba67d70ceafd26fa4954eb922d530db4413e5e7c1ced13351499",
+				"dweb:/ipfs/QmW864qxQj1KnKz4GcvPUnxTgkJfxjHZ3cyz7dvpKhzcJH"
 			]
 		}
 	},
