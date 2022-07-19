@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -65,6 +70,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -115,11 +133,11 @@
 			]
 		},
 		"contracts/fundme.sol": {
-			"keccak256": "0x84df72bdc9d665c041a8887bc518cee2447bf0ab780b9c3928167ad9135a18eb",
+			"keccak256": "0xfaacc2cca954440a03cf7f777d3249a3c9e697ec629dcd1c0062101833a80728",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e99c3d79c28efe6927638338cc31b7859f2436a1feb1193d0f879bb657a00c1c",
-				"dweb:/ipfs/QmdBuEW7D8FRebZSnurCzNyZewk2t1RvfN2x75Rh9Vdauf"
+				"bzz-raw://91f7872ccc51289c8daecb1b580cee33571994386cc5b04924f64d51dc08f79c",
+				"dweb:/ipfs/QmNsgJkKhWuumsZBBvD8PxR3grv873u2E2BeJN78FbVoJP"
 			]
 		}
 	},
