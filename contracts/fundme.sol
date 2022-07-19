@@ -6,7 +6,12 @@ import "./PriceConverter.sol";
 contract FundMe{
 
     using PriceConverter for uint256;
-    uint256 public minimumUsd = 50 * 1e18;    // 1 * 10 ** 18
+    
+    //constant and immutable are gasEfficient and can reduce overall gas fee.
+
+    uint256 public constant minimumUsd = 50 * 1e18;    // 1 * 10 ** 18
+    address public immutable owner;
+
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
@@ -19,7 +24,6 @@ contract FundMe{
         addressToAmountFunded[msg.sender] += msg.value; 
     }
 
-    address public owner;
     constructor(){
         // we are using owner variable to define who is the owner of this contract and then only owner will be able to withdraw the amount
         owner = msg.sender;
@@ -42,7 +46,7 @@ contract FundMe{
             1. transfer  :  throw error   and gas fees is 2300
             2. send      :  give boolean if transfer was successful   and gas fees is 2300 
             3. call      :  can Modifiy gas fees here
-        */
+        */ 
         payable(msg.sender).transfer(address(this).balance);
     }
  
