@@ -48,7 +48,7 @@ contract FundMe{
  
     //modifier : Function Modifiers are used to modify the behaviour of a function.
     modifier onlyOwner {
-        //_;   // if you want to run function then modifier 
+        //_;   // if you want to run function then modifier.
         require(msg.sender == owner,"Only owner can withdraw");
         _;  //do rest of the code  first the modifier will be called then the other function will be invoked.
     }
